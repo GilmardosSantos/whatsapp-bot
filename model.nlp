@@ -1,0 +1,310 @@
+{
+  "settings": {
+    "languages": [
+      "pt"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "pt"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "pt": {
+        "settings": {
+          "locale": "pt",
+          "trainByDomain": false,
+          "tag": "domain-manager-pt",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "salv": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "fal": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "eae": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "oi": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "ola": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "bom,dia": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "boa,tard": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "boa,noit": {
+            "intent": "greetings",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greetings": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Salve",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Fala",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Eae",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Oi",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Olá",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bom dia",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Boa tarde",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Boa Noite",
+            "intent": "greetings"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "pt",
+              "tag": "nlu-pt",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "salv": 1,
+              "fal": 1,
+              "eae": 1,
+              "oi": 1,
+              "ola": 1,
+              "bom": 1,
+              "dia": 1,
+              "boa": 1,
+              "tard": 1,
+              "noit": 1
+            },
+            "intents": {
+              "greetings": 1
+            },
+            "intentFeatures": {
+              "greetings": {
+                "salv": 1,
+                "fal": 1,
+                "eae": 1,
+                "oi": 1,
+                "ola": 1,
+                "bom": 1,
+                "dia": 1,
+                "boa": 1,
+                "tard": 1,
+                "noit": 1
+              }
+            },
+            "featuresToIntent": {
+              "salv": [
+                "greetings"
+              ],
+              "fal": [
+                "greetings"
+              ],
+              "eae": [
+                "greetings"
+              ],
+              "oi": [
+                "greetings"
+              ],
+              "ola": [
+                "greetings"
+              ],
+              "bom": [
+                "greetings"
+              ],
+              "dia": [
+                "greetings"
+              ],
+              "boa": [
+                "greetings"
+              ],
+              "tard": [
+                "greetings"
+              ],
+              "noit": [
+                "greetings"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "pt",
+                "tag": "nlu-pt",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "salv",
+                "fal",
+                "eae",
+                "oi",
+                "ola",
+                "bom",
+                "dia",
+                "boa",
+                "tard",
+                "noit"
+              ],
+              "intents": [
+                "greetings"
+              ],
+              "perceptrons": [
+                [
+                  3.3755714893341064,
+                  3.537391185760498,
+                  3.5030996799468994,
+                  3.4679198265075684,
+                  3.431919813156128,
+                  1.802904725074768,
+                  1.802904725074768,
+                  2.372893810272217,
+                  1.1960201263427734,
+                  1.1834490299224854,
+                  10.757398740194434
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "pt",
+        "Salve"
+      ],
+      [
+        "pt",
+        "Fala"
+      ],
+      [
+        "pt",
+        "Eae"
+      ],
+      [
+        "pt",
+        "Oi"
+      ],
+      [
+        "pt",
+        "Olá"
+      ],
+      [
+        "pt",
+        "Bom dia"
+      ],
+      [
+        "pt",
+        "Boa tarde"
+      ],
+      [
+        "pt",
+        "Boa Noite"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "pt": {
+        "greetings": [
+          {
+            "answer": "Olá, bom dia, sou o atendente virtual da barbearia, escolha uma das opções para prosseguirmos com o atendimento"
+          },
+          {
+            "answer": "Olá, boa tarde, sou o atendente virtual da barbearia, escolha uma das opções para prosseguirmos com o atendimento"
+          },
+          {
+            "answer": "Olá, boa noite, sou o atendente virtual da barbearia, escolha uma das opções para prosseguirmos com o atendimento"
+          },
+          {
+            "answer": "Olá, sou o atendente virtual da barbearia , escolha uma das opções para prosseguirmos com o atendimento"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
